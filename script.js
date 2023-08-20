@@ -10,6 +10,10 @@
     }
 */
 
+const e = require("express");
+
+const fuckedUp = true;
+
 function setCokesTotal(total) {
     cokesTotal.innerHTML = `${total} coke${total==1?"":"s"}`;
 }
@@ -32,6 +36,7 @@ window.onload = async function() {
 var encrypted_access_token = "U2FsdGVkX1+5CuiCHyT68LcxNHlzAeAwaRCYQTK2eeI=";
 
 async function doSecurityCheck() {
+    if (fuckedUp) return;
     if (!localStorage.coke_dkey || localStorage.coke_dkey == "") {
         localStorage.coke_dkey = await promptForPassword("Enter decryption key:");
     }
@@ -53,11 +58,25 @@ function promptForPassword(question, value="") {
 }
 
 async function uploadConfig() {
+    if (fuckedUp) {
+        localStorage.coke_config = JSON.stringify(config);
+        return;
+    }
     configLoader.config = config;
     await configLoader.uploadConfig();
 }
 
 async function downloadConfig() {
+    if (fuckedUp) {
+        var json = localStorage.coke_config;
+        if (!json) {
+            config = {
+                people: [],
+            }
+        } else {
+            config = JSON.parse(localStorage.coke_config);
+        }
+    }
     config = await configLoader.downloadConfig();
     return config;
 }
