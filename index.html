@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>CokeTab</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+        <script src="configloader.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="https://static.thenounproject.com/png/1199641-200.png" />
+    </head>
+    <body>
+        <div id="loadURLS">
+            <input id="cbload" type="checkbox" class="fav" />
+            <label for="cbload"></label><br>
+            <input id="cbload2" type="checkbox" class="fav" checked />
+            <label for="cbload2"></label><br>
+        </div>
+        <h2>You are owed</h2>
+        <h1 id="cokesTotal">0 cokes</h1>
+        <div id="people">
+        <!--
+            <div class="person">
+                <div class="pWrap">
+                    <span class="pName">Aidan</span>
+                    <input id="cb0" type="checkbox" class="fav" />
+                    <label for="cb0"></label><br>
+
+                    <button class="actionBtn left">-</button>
+                    <span class="pAmt">0</span>
+                    <button class="actionBtn right">+</button>
+                </div>
+            </div>
+        -->
+        </div>
+        <span id="newPersonBtn" onclick="addNewPerson()">+</span>
+    </body>
+</html>
