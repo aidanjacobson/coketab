@@ -74,6 +74,7 @@ async function downloadConfig() {
         } else {
             config = JSON.parse(localStorage.coke_config);
         }
+        return config;
     }
     config = await configLoader.downloadConfig();
     return config;
