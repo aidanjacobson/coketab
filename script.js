@@ -10,8 +10,6 @@
     }
 */
 
-const e = require("express");
-
 const fuckedUp = true;
 
 function setCokesTotal(total) {
