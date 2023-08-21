@@ -28,6 +28,7 @@ window.onload = async function() {
     await doSecurityCheck();
     await downloadConfig();
     loaded = true;
+    calculateTotalCokes();
     displayCokes();
 }
 
