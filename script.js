@@ -10,7 +10,7 @@
     }
 */
 
-const fuckedUp = true;
+const fuckedUp = false;
 
 function setCokesTotal(total) {
     cokesTotal.innerHTML = `${total} coke${total==1?"":"s"}`;
