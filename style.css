@@ -36,6 +36,7 @@ h2 {
 .pAmt {
     font-size: 150px;
     vertical-align: middle;
+    touch-action: manipulation;
 }
 
 .fav {

@@ -211,6 +211,18 @@ async function doCheckboxClick(e) {
     displayCokes();
 }
 
+async function doValueClick(e) {
+    var person = getPersonFromEvent(e);
+    var newAmount = prompt("Enter an amount", person.value);
+    if (newAmount && newAmount != null) {
+        person.value = +newAmount;
+    }
+    e.target.parentElement.children[5].innerText = person.value;
+    calculateTotalCokes();
+    await uploadConfig();
+    
+}
+
 async function doDeleteClick(e) {
     var person = getPersonFromEvent(e);
     if (!confirm(`Are you sure you want to delete ${person.name}?`)) return;
