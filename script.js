@@ -132,6 +132,7 @@ function buildCokeOutput(person) {
     var pAmt = document.createElement("span");
     pAmt.classList.add("pAmt");
     pAmt.innerText = person.value;
+    pAmt.onclick = doValueClick;
     pWrap.append(pAmt);
 
     var plusBtn = document.createElement("span");
