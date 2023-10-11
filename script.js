@@ -155,7 +155,7 @@ function buildCokeOutput(person) {
 function buildAdvertisementElement() {
     var div = document.createElement("div");
     var img = document.createElement("img");
-    img.src = "https://aidanjacobson.duckdns.org:7777/advertisement/random";
+    img.src = "https://aidanjacobson.duckdns.org:7777/advertisement/random?cache=" + Math.random();
     div.append(img);
     div.classList.add("advert");
 
