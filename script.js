@@ -89,7 +89,7 @@ function displayCokes() {
     for (var i = 0; i < config.people.length; i++) {
         var cokeElement = buildCokeOutput(config.people[i]);
         people.append(cokeElement);
-        if (i % cokesInBetweenAds == 2) {
+        if (i % cokesInBetweenAds == cokesInBetweenAds-1) {
             people.append(buildAdvertisementElement());
             adDisplayed = true;
         }
